@@ -379,22 +379,25 @@
 		</div>
 	</div>
 
-	<script src="reveal.js/dist/reveal.js"></script>
-	<script src="reveal.js/plugin/notes/notes.js"></script>
-	<script src="reveal.js/plugin/markdown/markdown.js"></script>
-	<script src="reveal.js/plugin/highlight/highlight.js"></script>
-	<script src="reveal.js/plugin/zoom/zoom.js"></script>
-	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
-		Reveal.initialize({
-			hash: true,
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			// Modern Reveal.js initialization
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				hash: true,
 
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom],
-		});
-	</script>
-</body>
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+	</body>
 </html>
