@@ -1,0 +1,10 @@
+#!/bin/sh
+# Script to serve the presentation locally using live-server
+
+type live-server >/dev/null 2>&1 || {
+  echo "live-server is not installed. Installing globally with npm..."
+  npm install -g live-server || { echo "npm install failed"; exit 1; }
+}
+
+echo "Serving Reveal.js presentation at http://localhost:8080"
+live-server
